@@ -6,11 +6,11 @@ def print_input(input, length):
         print(" ".join(row))
     print()
 
-def val_col_row(problem, length):
+def val_col_row(solution, length):
     row = [0] * length
     col = [0] * length
-    for i in range(len(problem)):
-        if problem[i] == "#":
+    for i in range(len(solution)):
+        if solution[i] == "#":
             row[i // length] += 1
             col[i % length] += 1
     return all(x == 1 for x in row) and all(x == 1 for x in col)
